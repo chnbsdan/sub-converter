@@ -5,8 +5,8 @@ export function generateStyles() {
     --bg-color: #1a1a1a;
     --text-color: #e0e0e0;
     --card-bg: rgba(255, 255, 255, 0.1);
-    --card-header-bg: linear-gradient(135deg, rgba(236, 72, 153, 0.8) 0%, rgba(219, 39, 119, 0.8) 100%);
-    --btn-primary-bg: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    --card-header-bg: linear-gradient(135deg, rgba(167, 243, 208, 0.8) 0%, rgba(110, 231, 183, 0.8) 100%);
+    --btn-primary-bg: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
     --input-bg: rgba(255, 255, 255, 0.15);
     --input-border: rgba(255, 255, 255, 0.2);
     --input-text: #e0e0e0;
@@ -21,7 +21,7 @@ export function generateStyles() {
     --dropdown-hover-bg: rgba(70, 70, 70, 0.9);
     --dropdown-hover-text: #e0e0e0;
     --switch-bg: rgba(255, 255, 255, 0.2);
-    --switch-checked-bg: #ec4899;
+    --switch-checked-bg: #6ee7b7;
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -220,9 +220,8 @@ export function generateStyles() {
   }
 
   .form-control:focus, .form-select:focus {
-    border-color: #6a11cb;
-    box-shadow: 
-      0 0 0 0.2rem rgba(106, 17, 203, 0.25),
+    border-color: #6ee7b7;
+  box-shadow: 0 0 0 0.2rem rgba(110, 231, 183, 0.25),
       inset 0 2px 4px rgba(255, 255, 255, 0.1);
     background-color: var(--input-bg);
     color: var(--input-text);
@@ -577,8 +576,8 @@ export function generateStyles() {
   }
 
   .custom-rules-tab.active {
-    color: #6a11cb;
-    border-bottom-color: #6a11cb;
+    color: #6ee7b7;
+    border-bottom-color: #6ee7b7;
     background-color: var(--dropdown-hover-bg);
     font-weight: 600;
   }
