@@ -21,7 +21,7 @@ export function generateStyles() {
     --dropdown-hover-bg: rgba(70, 70, 70, 0.9);
     --dropdown-hover-text: #e0e0e0;
     --switch-bg: rgba(255, 255, 255, 0.2);
-    --switch-checked-bg: #6ee7b7;
+    --switch-checked-bg: #818cf8;
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   }
