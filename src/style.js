@@ -4,24 +4,24 @@ export function generateStyles() {
   :root {
     --bg-color: #1a1a1a;
     --text-color: #e0e0e0;
-    --card-bg: rgba(255, 255, 255, 0.1);
-    --card-header-bg: linear-gradient(135deg, rgba(167, 243, 208, 0.8) 0%, rgba(110, 231, 183, 0.8) 100%);
-    --btn-primary-bg: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
-    --input-bg: rgba(255, 255, 255, 0.15);
-    --input-border: rgba(255, 255, 255, 0.2);
+    --card-bg: #2c2c2c; /* 改为第一个代码的深色卡片背景 */
+    --card-header-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 改为第一个代码的渐变 */
+    --btn-primary-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 统一渐变风格 */
+    --input-bg: #3c3c3c; /* 改为第一个代码的输入框背景 */
+    --input-border: #555555; /* 改为第一个代码的边框颜色 */
     --input-text: #e0e0e0;
-    --placeholder-color: rgba(255, 255, 255, 0.6);
-    --section-border: rgba(255, 255, 255, 0.15);
-    --section-bg: rgba(255, 255, 255, 0.05);
-    --select-bg: rgba(255, 255, 255, 0.15);
+    --placeholder-color: #adb5bd; /* 改为第一个代码的占位符颜色 */
+    --section-border: rgba(255, 255, 255, 0.1); /* 改为第一个代码的边框透明度 */
+    --section-bg: rgba(255, 255, 255, 0.02); /* 改为第一个代码的背景透明度 */
+    --select-bg: #3c3c3c; /* 改为第一个代码的选择框背景 */
     --select-text: #e0e0e0;
-    --select-border: rgba(255, 255, 255, 0.2);
-    --dropdown-bg: rgba(50, 50, 50, 0.95);
+    --select-border: #555555; /* 改为第一个代码的边框颜色 */
+    --dropdown-bg: #2c2c2c; /* 改为第一个代码的下拉背景 */
     --dropdown-text: #e0e0e0;
-    --dropdown-hover-bg: rgba(70, 70, 70, 0.9);
+    --dropdown-hover-bg: #3c3c3c; /* 改为第一个代码的悬停背景 */
     --dropdown-hover-text: #e0e0e0;
-    --switch-bg: rgba(255, 255, 255, 0.2);
-    --switch-checked-bg: #818cf8;
+    --switch-bg: #555555; /* 改为第一个代码的开关背景 */
+    --switch-checked-bg: #4a0e8f; /* 改为第一个代码的选中颜色 */
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -29,22 +29,22 @@ export function generateStyles() {
   [data-theme="light"] {
     --bg-color: #f0f2f5;
     --text-color: #495057;
-    --card-bg: rgba(255, 255, 255, 0.85);
-    --card-header-bg: linear-gradient(135deg, rgba(106, 17, 203, 0.9) 0%, rgba(37, 117, 252, 0.9) 100%);
-    --input-bg: rgba(255, 255, 255, 0.9);
-    --input-border: rgba(0, 0, 0, 0.15);
+    --card-bg: #ffffff; /* 改为第一个代码的浅色卡片背景 */
+    --card-header-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 保持一致的渐变 */
+    --input-bg: #ffffff; /* 改为第一个代码的输入框背景 */
+    --input-border: #ced4da; /* 改为第一个代码的边框颜色 */
     --input-text: #495057;
-    --placeholder-color: #6c757d;
-    --section-border: rgba(0, 0, 0, 0.1);
-    --section-bg: rgba(0, 0, 0, 0.03);
-    --select-bg: rgba(255, 255, 255, 0.9);
+    --placeholder-color: #6c757d; /* 改为第一个代码的占位符颜色 */
+    --section-border: rgba(0, 0, 0, 0.1); /* 改为第一个代码的边框透明度 */
+    --section-bg: rgba(0, 0, 0, 0.02); /* 改为第一个代码的背景透明度 */
+    --select-bg: #ffffff; /* 改为第一个代码的选择框背景 */
     --select-text: #495057;
-    --select-border: rgba(0, 0, 0, 0.15);
-    --dropdown-bg: rgba(255, 255, 255, 0.95);
+    --select-border: #ced4da; /* 改为第一个代码的边框颜色 */
+    --dropdown-bg: #ffffff; /* 改为第一个代码的下拉背景 */
     --dropdown-text: #495057;
-    --dropdown-hover-bg: rgba(248, 249, 250, 0.9);
+    --dropdown-hover-bg: #f8f9fa; /* 改为第一个代码的悬停背景 */
     --dropdown-hover-text: #495057;
-    --switch-bg: rgba(0, 0, 0, 0.1);
+    --switch-bg: #e9ecef; /* 改为第一个代码的开关背景 */
   }
 
   /* 自定义背景图片 */
@@ -82,43 +82,27 @@ export function generateStyles() {
     z-index: 1;
   }
 
-  /* 大卡片毛玻璃效果 */
+  /* 大卡片效果 - 改为第一个代码的样式 */
   .card {
-    background: var(--card-bg);
-    border: 1px solid var(--section-border);
+    background-color: var(--card-bg); /* 使用第一个代码的纯色背景 */
+    border: none; /* 改为第一个代码的无边框 */
     border-radius: 15px;
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 改为第一个代码的阴影 */
     margin-bottom: 2rem;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
     transition: all 0.3s var(--transition-timing);
     position: relative;
     overflow: hidden;
   }
 
-  /* 卡片发光效果 */
+  /* 移除卡片发光效果 */
   .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
-    border-radius: 15px;
-    pointer-events: none;
+    display: none;
   }
 
   .card:hover {
-    box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.4),
-      0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* 改为第一个代码的悬停阴影 */
     transform: translateY(-5px);
   }
 
@@ -128,25 +112,14 @@ export function generateStyles() {
     border-radius: 15px 15px 0 0;
     padding: 2.5rem 2rem;
     border-bottom: 1px solid var(--section-border);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
     position: relative;
   }
 
+  /* 移除卡片头部的渐变覆盖 */
   .card-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    border-radius: 15px 15px 0 0;
-    pointer-events: none;
+    display: none;
   }
 
   .card-body {
@@ -155,39 +128,28 @@ export function generateStyles() {
     z-index: 1;
   }
 
-  /* 表单区域毛玻璃效果 */
+  /* 表单区域 - 改为第一个代码的样式 */
   .form-section {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid var(--section-border);
     border-radius: 10px;
     background: var(--section-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
     transition: all 0.3s var(--transition-timing);
     position: relative;
   }
 
+  /* 移除表单区域的渐变覆盖 */
   .form-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 100%
-    );
-    border-radius: 10px;
-    pointer-events: none;
+    display: none;
   }
 
   .form-section:hover {
-    border-color: rgba(106, 17, 203, 0.4);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    border-color: var(--section-border); /* 改为第一个代码的边框颜色 */
+    box-shadow: none; /* 移除阴影 */
+    transform: none; /* 移除悬停动画 */
   }
 
   .form-section-title {
@@ -201,7 +163,7 @@ export function generateStyles() {
     margin-bottom: 1rem;
   }
 
-  /* 输入框毛玻璃效果 */
+  /* 输入框 - 改为第一个代码的样式 */
   .form-control, .form-select {
     padding: 0.75rem 1rem;
     border-radius: 8px;
@@ -209,8 +171,8 @@ export function generateStyles() {
     background-color: var(--input-bg);
     border: 1px solid var(--input-border);
     color: var(--input-text);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
     position: relative;
   }
 
@@ -220,44 +182,28 @@ export function generateStyles() {
   }
 
   .form-control:focus, .form-select:focus {
-    border-color: #6ee7b7;
-  box-shadow: 0 0 0 0.2rem rgba(110, 231, 183, 0.25),
-      inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    border-color: #6a11cb; /* 改为第一个代码的焦点边框颜色 */
+    box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25); /* 改为第一个代码的焦点阴影 */
     background-color: var(--input-bg);
     color: var(--input-text);
-    transform: translateY(-1px);
+    transform: none; /* 移除焦点动画 */
   }
 
-  /* 按钮毛玻璃效果 */
+  /* 按钮 - 改为第一个代码的样式 */
   .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
     position: relative;
     overflow: hidden;
   }
 
+  /* 移除按钮的渐变覆盖 */
   .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .btn:hover::before {
-    opacity: 1;
+    display: none;
   }
 
   .btn-primary {
@@ -266,22 +212,20 @@ export function generateStyles() {
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-      0 5px 15px rgba(106, 17, 203, 0.4),
-      0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: none; /* 改为第一个代码的无变换效果 */
+    box-shadow: none; /* 移除阴影 */
   }
 
   .input-group-text {
     background-color: var(--input-bg);
     border-color: var(--input-border);
     color: var(--input-text);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
   }
 
   .input-group { 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04); /* 改为第一个代码的阴影 */
   }
 
   h2, h4 {
@@ -306,9 +250,8 @@ export function generateStyles() {
   }
 
   .btn-outline-secondary:hover {
-    background-color: var(--dropdown-hover-bg);
+    background-color: var(--input-bg); /* 改为第一个代码的悬停背景 */
     color: var(--text-color);
-    border-color: var(--text-color);
   }
 
   .btn-success {
@@ -328,18 +271,31 @@ export function generateStyles() {
     right: 20px;
     z-index: 1000;
     color: var(--text-color);
-    border-color: var(--input-border);
-    background-color: var(--card-bg);
-    transition: all 0.3s var(--transition-timing);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: transparent; /* 改为第一个代码的透明背景 */
+    border: none; /* 改为第一个代码的无边框 */
+    border-radius: 0; /* 改为第一个代码的无圆角 */
+    box-shadow: none; /* 移除阴影 */
+    padding: 0;
+    transition: color 0.3s var(--transition-timing);
   }
 
   #darkModeToggle:hover {
-    background-color: var(--dropdown-hover-bg);
-    border-color: var(--text-color);
-    color: var(--text-color);
-    transform: translateY(-2px);
+    transform: none !important; /* 移除悬停动画 */
+    background-color: transparent; /* 保持透明 */
+    border: none;
+  }
+
+  #darkModeToggle i {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  #darkModeToggle {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .github-link {
@@ -350,22 +306,22 @@ export function generateStyles() {
     font-size: 2rem;
     color: var(--text-color);
     transition: color 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    padding: 10px;
-    width: 60px;
-    height: 60px;
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    background: none; /* 移除背景 */
+    border-radius: 0; /* 移除圆角 */
+    padding: 0; /* 移除内边距 */
+    width: auto; /* 自动宽度 */
+    height: auto; /* 自动高度 */
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .github-link:hover { 
-    color: #6a11cb; 
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+    color: #136cef; /* 改为第一个代码的悬停颜色 */
+    background: none; /* 移除背景 */
+    transform: none; /* 移除变换 */
   }
   
   .tooltip-icon {
@@ -400,10 +356,10 @@ export function generateStyles() {
     z-index: 1000;
     width: 180px;
     max-width: 90vw;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 改为第一个代码的阴影 */
     transition: opacity 0.3s, visibility 0.3s;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
   }
 
   .tooltip-icon:hover .tooltip-content {
@@ -422,7 +378,7 @@ export function generateStyles() {
 
   .form-check-input {
     background-color: var(--switch-bg);
-    border-color: transparent;
+    border-color: var(--switch-border);
   }
 
   .form-check-input:checked {
@@ -467,7 +423,7 @@ export function generateStyles() {
   .form-select:focus {
     background-color: var(--select-bg);
     color: var(--select-text);
-    border-color: #6a11cb;
+    border-color: var(--checkbox-checked-border);
     box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25);
   }
 
