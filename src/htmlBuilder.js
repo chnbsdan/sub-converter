@@ -58,7 +58,7 @@ const generateDarkModeToggle = () => `
 `;
 
 const generateGithubLink = () => `
-  <a href="https://github.com/chnbsdan/sublink-worker" target="_blank" rel="noopener noreferrer" class="github-link">
+  <a href="https://github.com/chnbsdan/sub-converter" target="_blank" rel="noopener noreferrer" class="github-link">
     <i class="fab fa-github"></i>
   </a>
 `;
