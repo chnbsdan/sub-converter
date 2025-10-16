@@ -5,8 +5,8 @@ export function generateStyles() {
     --bg-color: #1a1a1a;
     --text-color: #e0e0e0;
     --card-bg: rgba(255, 255, 255, 0.1);
-    --card-header-bg: linear-gradient(135deg, rgba(106, 17, 203, 0.8) 0%, rgba(37, 117, 252, 0.8) 100%);
-    --btn-primary-bg: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --card-header-bg: linear-gradient(135deg, rgba(236, 72, 153, 0.8) 0%, rgba(219, 39, 119, 0.8) 100%);
+    --btn-primary-bg: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
     --input-bg: rgba(255, 255, 255, 0.15);
     --input-border: rgba(255, 255, 255, 0.2);
     --input-text: #e0e0e0;
@@ -21,7 +21,7 @@ export function generateStyles() {
     --dropdown-hover-bg: rgba(70, 70, 70, 0.9);
     --dropdown-hover-text: #e0e0e0;
     --switch-bg: rgba(255, 255, 255, 0.2);
-    --switch-checked-bg: #6a11cb;
+    --switch-checked-bg: #ec4899;
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   }
