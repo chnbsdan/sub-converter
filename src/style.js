@@ -1088,6 +1088,51 @@ export const generateStyles = () => `
                 transform 0.3s var(--transition-timing);
   }
 
+   /* 保留你现有的所有CSS变量和样式，然后添加以下内容 */
+
+/* 极光玻璃背景 */
+body {
+  background-color: #0c0a09;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(355, 98%, 76%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 73%, 0.2) 0px, transparent 50%);
+  animation: auroraBG 20s ease-in-out infinite alternate;
+}
+
+@keyframes auroraBG {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
+}
+
+/* 调整卡片背景为半透明 */
+.card {
+  background-color: rgba(44, 44, 44, 0.7);  /* 半透明 */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* 调整表单区域背景 */
+.form-section {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+}
+
   .tooltip-icon:hover .tooltip-content {
     opacity: 1;
     visibility: visible;
