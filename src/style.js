@@ -6,7 +6,7 @@ export function generateStyles() {
     --text-color: #e0e0e0;
     --card-bg: rgba(255, 255, 255, 0.1);
     --card-header-bg: linear-gradient(135deg, rgba(167, 243, 208, 0.8) 0%, rgba(110, 231, 183, 0.8) 100%);
-    --btn-primary-bg: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+    --btn-primary-bg: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
     --input-bg: rgba(255, 255, 255, 0.15);
     --input-border: rgba(255, 255, 255, 0.2);
     --input-text: #e0e0e0;
