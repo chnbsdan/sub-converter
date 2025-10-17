@@ -197,6 +197,46 @@ const generateScripts = () => `
     ${customPathFunctions()}
     ${saveConfig()}
     ${clearConfig()}
+    ${languageSwitchFunction()}  // 在这里添加语言切换功能
+    // 在文件末尾，所有其他函数之后添加这个函数
+const languageSwitchFunction = () => `
+  // 语言切换功能
+  function updateApiDocLink() {
+    const lang = document.getElementById('langSelect').value;
+    const apiDocLink = document.getElementById('apiDocLink');
+    const apiDocText = {
+      'zh-CN': 'API文档',
+      'en': 'API Doc',
+      'en-US': 'API Doc',
+      'fa': 'مستندات API',
+      'ru': 'Документация API'
+    };
+    apiDocLink.textContent = apiDocText[lang] || 'API Doc';
+    apiDocLink.href = '/api-doc?lang=' + lang;
+  }
+  
+  // 初始化语言选择
+  function initializeLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || navigator.language || 'zh-CN';
+    const langSelect = document.getElementById('langSelect');
+    
+    if (langSelect) {
+      langSelect.value = lang;
+      langSelect.addEventListener('change', function() {
+        urlParams.set('lang', this.value);
+        window.location.search = urlParams.toString();
+      });
+    }
+    
+    updateApiDocLink();
+  }
+  
+  // 监听语言选择变化
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeLanguage();
+    document.getElementById('langSelect').addEventListener('change', updateApiDocLink);
+  });
   </script>
 `;
 
