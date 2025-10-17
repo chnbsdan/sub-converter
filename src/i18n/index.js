@@ -17,14 +17,14 @@ const translations = {
     pageTitle: 'Sublink Worker - 订阅链接转换工具',
     ogTitle: 'Sublink Worker - 订阅链接转换工具',
     ogDescription: '一个强大的订阅链接转换工具，支持多种客户端格式',
-    shareUrls: '订阅链接或单节点',
-    urlPlaceholder: '在此输入base64(V2rayN)y订阅链接或单节点(每行一个)...',
+    shareUrls: '分享链接',
+    urlPlaceholder: '在此输入分享链接（可直接粘贴之前生成的链接快速解析配置）...',
     advancedOptions: '高级选项',
     baseConfigSettings: '基础配置设置',
     baseConfigTooltip: '在此处自定义您的基础配置',
     saveConfig: '保存配置',
     clearConfig: '清除配置',
-    convert: '开始转换',
+    convert: '转换',
     clear: '清除',
     customPath: '自定义路径',
     savedPaths: '已保存的路径',
@@ -104,9 +104,7 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: '自定义UserAgent',
-    UAtip: '默认值curl/7.74.0',
-    apiDocumentation: 'API文档',
-    language: '语言'
+    UAtip: '默认值curl/7.74.0'
   },
   'en-US': {
     missingInput: 'Missing input parameter',
@@ -210,9 +208,7 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'Custom UserAgent',
-    UAtip: 'By default it will use curl/7.74.0',
-    apiDocumentation: 'API Doc',
-    language: 'Language'
+    UAtip: 'By default it will use curl/7.74.0'
   },
   'fa': {
     missingInput: 'پارامتر ورودی وجود ندارد',
@@ -316,9 +312,7 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'UserAgent سفارشی',
-    UAtip: 'به طور پیش‌فرض از curl/7.74.0 استفاده می‌کند',
-    apiDocumentation: 'مستندات API',
-    language: 'زبان'
+    UAtip: 'به طور پیش‌فرض از curl/7.74.0 استفاده می‌کند'
   },
   'ru': {
     missingInput: 'Отсутствует входной параметр',
@@ -422,14 +416,13 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'Пользовательский UserAgent',
-    UAtip: 'По умолчанию используется curl/7.74.0',
-    apiDocumentation: 'Документация API',
-    language: 'Язык'
+    UAtip: 'По умолчанию используется curl/7.74.0'
   }
 };
 
 // 当前语言
 let currentLang = 'zh-CN';
+
 
 // 设置语言
 export function setLanguage(lang) {
@@ -479,6 +472,3 @@ export function getDefaultRules() {
 export function getOutbounds(){
   return translations[currentLang].outboundNames;
 }
-
-// 导出 translations 对象
-export { translations };
