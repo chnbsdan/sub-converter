@@ -1176,5 +1176,104 @@ export function generateStyles() {
     visibility: visible;
     transform: translateY(0);
   }
+  /* 之前的样式保持不变... */
+  
+  /* API文档按钮样式 */
+  .api-doc-btn {
+    color: #0aa26d;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    border-radius: 0;
+    padding: 0.5rem 1.2rem;
+    transition: none;
+    position: fixed;
+    top: 13px;
+    right: 200px;
+    z-index: 1001;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .api-doc-btn:hover, .api-doc-btn:focus {
+    color: #1f579b !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* 语言选择器样式 */
+  .lang-select-container {
+    position: fixed;
+    top: 10px;
+    right: 70px;
+    z-index: 1001;
+  }
+  
+  .lang-select {
+    width: 110px;
+    height: 45px;
+  }
+  
+  /* 深色模式适配 */
+  @media (prefers-color-scheme: dark) {
+    .api-doc-btn {
+      color: #fff !important;
+    }
+    .api-doc-btn:hover, .api-doc-btn:focus {
+      color: #1f579b !important;
+    }
+  }
+  
+  body[data-theme="dark"] .api-doc-btn,
+  html[data-theme="dark"] .api-doc-btn {
+    color: #fff !important;
+  }
+  
+  body[data-theme="dark"] .api-doc-btn:hover,
+  html[data-theme="dark"] .api-doc-btn:hover,
+  body[data-theme="dark"] .api-doc-btn:focus,
+  html[data-theme="dark"] .api-doc-btn:focus {
+    color: #1f579b !important;
+  }
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .api-doc-btn {
+      top: 10px;
+      right: 160px;
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+    
+    .lang-select-container {
+      top: 10px;
+      right: 60px;
+    }
+    
+    .lang-select {
+      width: 100px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .api-doc-btn {
+      right: 140px;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+    }
+    
+    .lang-select-container {
+      right: 50px;
+    }
+    
+    .lang-select {
+      width: 90px;
+      height: 35px;
+    }
+  }
+  
   `;
 }
