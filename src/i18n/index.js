@@ -104,7 +104,9 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: '自定义UserAgent',
-    UAtip: '默认值curl/7.74.0'
+    UAtip: '默认值curl/7.74.0',
+    apiDocumentation: 'API文档',
+    language: '语言'
   },
   'en-US': {
     missingInput: 'Missing input parameter',
@@ -208,7 +210,9 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'Custom UserAgent',
-    UAtip: 'By default it will use curl/7.74.0'
+    UAtip: 'By default it will use curl/7.74.0',
+    apiDocumentation: 'API Doc',
+    language: 'Language'
   },
   'fa': {
     missingInput: 'پارامتر ورودی وجود ندارد',
@@ -312,7 +316,9 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'UserAgent سفارشی',
-    UAtip: 'به طور پیش‌فرض از curl/7.74.0 استفاده می‌کند'
+    UAtip: 'به طور پیش‌فرض از curl/7.74.0 استفاده می‌کند',
+    apiDocumentation: 'مستندات API',
+    language: 'زبان'
   },
   'ru': {
     missingInput: 'Отсутствует входной параметр',
@@ -416,13 +422,14 @@ const translations = {
       'GLOBAL': 'GLOBAL'
     },
     UASettings: 'Пользовательский UserAgent',
-    UAtip: 'По умолчанию используется curl/7.74.0'
+    UAtip: 'По умолчанию используется curl/7.74.0',
+    apiDocumentation: 'Документация API',
+    language: 'Язык'
   }
 };
 
 // 当前语言
 let currentLang = 'zh-CN';
-
 
 // 设置语言
 export function setLanguage(lang) {
@@ -473,31 +480,5 @@ export function getOutbounds(){
   return translations[currentLang].outboundNames;
 }
 
-// 在您的 i18n/index.js 中添加对应的翻译键值
-// 例如：
-export const translations = {
-  'zh-CN': {
-    // ... 现有翻译
-    'apiDocumentation': 'API文档',
-    'language': '语言',
-    // ... 其他翻译
-  },
-  'en': {
-    // ... 现有翻译
-    'apiDocumentation': 'API Doc',
-    'language': 'Language',
-    // ... 其他翻译
-  },
-  'fa': {
-    // ... 现有翻译
-    'apiDocumentation': 'مستندات API',
-    'language': 'زبان',
-    // ... 其他翻译
-  },
-  'ru': {
-    // ... 现有翻译
-    'apiDocumentation': 'Документация API',
-    'language': 'Язык',
-    // ... 其他翻译
-  }
-};
+// 导出 translations 对象
+export { translations };
