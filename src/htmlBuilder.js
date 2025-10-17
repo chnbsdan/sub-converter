@@ -25,6 +25,7 @@ const generateHead = () => `
     <meta property="og:url" content="https://sublink-worker.sageer.me/">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://pan.hangdn.com/raw/ico/map64.ico">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
     <style>
       ${generateStyles()}
@@ -58,7 +59,7 @@ const generateDarkModeToggle = () => `
 `;
 
 const generateGithubLink = () => `
-  <a href="https://github.com/7Sageer/sublink-worker" target="_blank" rel="noopener noreferrer" class="github-link">
+  <a href="https://github.com/chnbsdan/sub-converter" target="_blank" rel="noopener noreferrer" class="github-link">
     <i class="fab fa-github"></i>
   </a>
 `;
