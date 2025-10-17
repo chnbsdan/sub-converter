@@ -36,6 +36,8 @@ const generateHead = () => `
 const generateBody = (xrayUrl, singboxUrl, clashUrl, surgeUrl, baseUrl) => `
   <body>
     ${generateDarkModeToggle()}
+    ${generateApiDocButton()}        // 新增
+    ${generateLanguageSelector()}    // 新增
     ${generateGithubLink()}
     <div class="container mt-5">
       <div class="card mb-5">
@@ -50,6 +52,21 @@ const generateBody = (xrayUrl, singboxUrl, clashUrl, surgeUrl, baseUrl) => `
     </div>
     ${generateScripts()}
   </body>
+`;
+// 添加新的生成函数
+const generateApiDocButton = () => `
+  <a href="#" id="apiDocLink" class="api-doc-btn">API文档</a>
+`;
+
+const generateLanguageSelector = () => `
+  <div class="lang-select-container">
+    <select id="langSelect" class="form-select lang-select">
+      <option value="zh-CN">简体中文</option>
+      <option value="en">English</option>
+      <option value="fa">فارسی</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
 `;
 
 const generateDarkModeToggle = () => `
