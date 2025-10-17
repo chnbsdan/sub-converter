@@ -23,7 +23,6 @@ const generateHead = () => `
     <meta property="og:description" content="${t('ogDescription')}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sublink-worker.sageer.me/">
-    <link rel="icon" href="https://pan.hangdn.com/raw/ico/map64.ico" type="image/ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
@@ -36,8 +35,6 @@ const generateHead = () => `
 const generateBody = (xrayUrl, singboxUrl, clashUrl, surgeUrl, baseUrl) => `
   <body>
     ${generateDarkModeToggle()}
-    ${generateApiDocButton()}        
-    ${generateLanguageSelector()}   
     ${generateGithubLink()}
     <div class="container mt-5">
       <div class="card mb-5">
@@ -54,22 +51,6 @@ const generateBody = (xrayUrl, singboxUrl, clashUrl, surgeUrl, baseUrl) => `
   </body>
 `;
 
-// 添加新的生成函数
-const generateApiDocButton = () => `
-  <a href="#" id="apiDocLink" class="api-doc-btn">API文档</a>
-`;
-
-const generateLanguageSelector = () => `
-  <div class="lang-select-container">
-    <select id="langSelect" class="form-select lang-select">
-      <option value="zh-CN">简体中文</option>
-      <option value="en">English</option>
-      <option value="fa">فارسی</option>
-      <option value="ru">Русский</option>
-    </select>
-  </div>
-`;
-
 const generateDarkModeToggle = () => `
   <button id="darkModeToggle" class="btn btn-outline-secondary">
     <i class="fas fa-moon"></i>
@@ -77,14 +58,14 @@ const generateDarkModeToggle = () => `
 `;
 
 const generateGithubLink = () => `
-  <a href="https://github.com/chnbsdan/sub-converter" target="_blank" rel="noopener noreferrer" class="github-link">
+  <a href="https://github.com/7Sageer/sublink-worker" target="_blank" rel="noopener noreferrer" class="github-link">
     <i class="fab fa-github"></i>
   </a>
 `;
 
 const generateCardHeader = () => `
   <div class="card-header text-center">
-    <h1 class="display-4 mb-0">在线订阅转换</h1>
+    <h1 class="display-4 mb-0">Sublink Worker</h1>
   </div>
 `;
 
@@ -198,42 +179,6 @@ const generateScripts = () => `
     ${customPathFunctions()}
     ${saveConfig()}
     ${clearConfig()}
-    
-    // 语言切换功能
-    function updateApiDocLink() {
-      const lang = document.getElementById('langSelect').value;
-      const apiDocLink = document.getElementById('apiDocLink');
-      const apiDocText = {
-        'zh-CN': 'API文档',
-        'en': 'API Doc',
-        'en-US': 'API Doc',
-        'fa': 'مستندات API',
-        'ru': 'Документация API'
-      };
-      apiDocLink.textContent = apiDocText[lang] || 'API Doc';
-      apiDocLink.href = '/api-doc?lang=' + lang;
-    }
-    
-    function initializeLanguage() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const lang = urlParams.get('lang') || navigator.language || 'zh-CN';
-      const langSelect = document.getElementById('langSelect');
-      
-      if (langSelect) {
-        langSelect.value = lang;
-        langSelect.addEventListener('change', function() {
-          urlParams.set('lang', this.value);
-          window.location.search = urlParams.toString();
-        });
-      }
-      
-      updateApiDocLink();
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      initializeLanguage();
-      document.getElementById('langSelect').addEventListener('change', updateApiDocLink);
-    });
   </script>
 `;
 
