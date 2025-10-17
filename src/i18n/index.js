@@ -472,3 +472,32 @@ export function getDefaultRules() {
 export function getOutbounds(){
   return translations[currentLang].outboundNames;
 }
+
+// 在您的 i18n/index.js 中添加对应的翻译键值
+// 例如：
+export const translations = {
+  'zh-CN': {
+    // ... 现有翻译
+    'apiDocumentation': 'API文档',
+    'language': '语言',
+    // ... 其他翻译
+  },
+  'en': {
+    // ... 现有翻译
+    'apiDocumentation': 'API Doc',
+    'language': 'Language',
+    // ... 其他翻译
+  },
+  'fa': {
+    // ... 现有翻译
+    'apiDocumentation': 'مستندات API',
+    'language': 'زبان',
+    // ... 其他翻译
+  },
+  'ru': {
+    // ... 现有翻译
+    'apiDocumentation': 'Документация API',
+    'language': 'Язык',
+    // ... 其他翻译
+  }
+};
