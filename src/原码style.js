@@ -1,67 +1,109 @@
-export const generateStyles = () => `
+// style.js
+export function generateStyles() {
+  return `
   :root {
-    --bg-color: #f0f2f5;
-    --text-color: #495057;
-    --card-bg: #ffffff;
-    --card-header-bg: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    --btn-primary-bg: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    --input-bg: #ffffff;
-    --input-border: #ced4da;
-    --input-text: #495057;
-    --placeholder-color: #6c757d;
-    --section-border: rgba(0, 0, 0, 0.1);
-    --section-bg: rgba(0, 0, 0, 0.02);
-    --select-bg: #ffffff;
-    --select-text: #495057;
-    --select-border: #ced4da;
-    --dropdown-bg: #ffffff;
-    --dropdown-text: #495057;
-    --dropdown-hover-bg: #f8f9fa;
-    --dropdown-hover-text: #495057;
-    --switch-bg: #e9ecef;
-    --switch-checked-bg: #6a11cb;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2c2c2c; /* 改为第一个代码的深色卡片背景 */
+    --card-header-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 改为第一个代码的渐变 */
+    --btn-primary-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 统一渐变风格 */
+    --input-bg: #3c3c3c; /* 改为第一个代码的输入框背景 */
+    --input-border: #555555; /* 改为第一个代码的边框颜色 */
+    --input-text: #e0e0e0;
+    --placeholder-color: #adb5bd; /* 改为第一个代码的占位符颜色 */
+    --section-border: rgba(255, 255, 255, 0.1); /* 改为第一个代码的边框透明度 */
+    --section-bg: rgba(255, 255, 255, 0.02); /* 改为第一个代码的背景透明度 */
+    --select-bg: #3c3c3c; /* 改为第一个代码的选择框背景 */
+    --select-text: #e0e0e0;
+    --select-border: #555555; /* 改为第一个代码的边框颜色 */
+    --dropdown-bg: #2c2c2c; /* 改为第一个代码的下拉背景 */
+    --dropdown-text: #e0e0e0;
+    --dropdown-hover-bg: #3c3c3c; /* 改为第一个代码的悬停背景 */
+    --dropdown-hover-text: #e0e0e0;
+    --switch-bg: #555555; /* 改为第一个代码的开关背景 */
+    --switch-checked-bg: #4a0e8f; /* 改为第一个代码的选中颜色 */
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  [data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --card-bg: #2c2c2c;
-    --card-header-bg: linear-gradient(135deg, #4a0e8f 0%, #1a5ab8 100%);
-    --btn-primary-bg: linear-gradient(135deg, #4a0e8f 0%, #1a5ab8 100%);
-    --input-bg: #3c3c3c;
-    --input-border: #555555;
-    --input-text: #e0e0e0;
-    --placeholder-color: #adb5bd;
-    --section-border: rgba(255, 255, 255, 0.1);
-    --section-bg: rgba(255, 255, 255, 0.02);
-    --select-bg: #3c3c3c;
-    --select-text: #e0e0e0;
-    --select-border: #555555;
-    --dropdown-bg: #2c2c2c;
-    --dropdown-text: #e0e0e0;
-    --dropdown-hover-bg: #3c3c3c;
-    --dropdown-hover-text: #e0e0e0;
-    --switch-bg: #555555;
-    --switch-checked-bg: #4a0e8f;
+  [data-theme="light"] {
+    --bg-color: #f0f2f5;
+    --text-color: #495057;
+    --card-bg: #ffffff; /* 改为第一个代码的浅色卡片背景 */
+    --card-header-bg: linear-gradient(135deg, #1b94cc 0%, #08a363 100%); /* 保持一致的渐变 */
+    --input-bg: #ffffff; /* 改为第一个代码的输入框背景 */
+    --input-border: #ced4da; /* 改为第一个代码的边框颜色 */
+    --input-text: #495057;
+    --placeholder-color: #6c757d; /* 改为第一个代码的占位符颜色 */
+    --section-border: rgba(0, 0, 0, 0.1); /* 改为第一个代码的边框透明度 */
+    --section-bg: rgba(0, 0, 0, 0.02); /* 改为第一个代码的背景透明度 */
+    --select-bg: #ffffff; /* 改为第一个代码的选择框背景 */
+    --select-text: #495057;
+    --select-border: #ced4da; /* 改为第一个代码的边框颜色 */
+    --dropdown-bg: #ffffff; /* 改为第一个代码的下拉背景 */
+    --dropdown-text: #495057;
+    --dropdown-hover-bg: #f8f9fa; /* 改为第一个代码的悬停背景 */
+    --dropdown-hover-text: #495057;
+    --switch-bg: #e9ecef; /* 改为第一个代码的开关背景 */
   }
 
-  .container { max-width: 800px; }
-
+  /* 自定义背景图片 */
   body {
-    background-color: var(--bg-color);
+    background-image: url('https://webp.hangdn.com/fg/fg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    min-height: 100vh;
     transition: background-color 0.3s var(--transition-timing), color 0.3s var(--transition-timing);
+    overflow-x: hidden;
   }
 
+  /* 深色遮罩层，确保文字可读性 */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+  }
+
+  .container { 
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 大卡片效果 - 改为第一个代码的样式 */
   .card {
-    background-color: var(--card-bg);
-    border: none;
+    background-color: var(--card-bg); /* 使用第一个代码的纯色背景 */
+    border: none; /* 改为第一个代码的无边框 */
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 改为第一个代码的阴影 */
     margin-bottom: 2rem;
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    transition: all 0.3s var(--transition-timing);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 移除卡片发光效果 */
+  .card::before {
+    display: none;
+  }
+
+  .card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* 改为第一个代码的悬停阴影 */
+    transform: translateY(-5px);
   }
 
   .card-header {
@@ -70,41 +112,46 @@ export const generateStyles = () => `
     border-radius: 15px 15px 0 0;
     padding: 2.5rem 2rem;
     border-bottom: 1px solid var(--section-border);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    position: relative;
+  }
+
+  /* 移除卡片头部的渐变覆盖 */
+  .card-header::before {
+    display: none;
   }
 
   .card-body {
     padding: 2rem;
+    position: relative;
+    z-index: 1;
   }
 
+  /* 表单区域 - 改为第一个代码的样式 */
   .form-section {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid var(--section-border);
     border-radius: 10px;
     background: var(--section-bg);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    transition: all 0.3s var(--transition-timing);
+    position: relative;
   }
 
-  /* Ensure form button containers have proper spacing */
-  .card-body .d-flex {
-    margin-left: 0;
-    margin-right: 0;
+  /* 移除表单区域的渐变覆盖 */
+  .form-section::before {
+    display: none;
   }
 
-  /* Target the convert/clear button container specifically */
-  /* Ensure consistent spacing with other form elements */
-  .card-body > form > .d-flex.gap-2.mt-4 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .form-section:hover {
+    border-color: var(--section-border); /* 改为第一个代码的边框颜色 */
+    box-shadow: none; /* 移除阴影 */
+    transform: none; /* 移除悬停动画 */
   }
 
-  .button-container {
-    margin-left: 1.5rem !important;
-    margin-right: 1.5rem !important;
-    padding: 0;
-    border: none;
-    background: none;
-  }
-    
   .form-section-title {
     font-size: 1.1rem;
     font-weight: 600;
@@ -116,22 +163,47 @@ export const generateStyles = () => `
     margin-bottom: 1rem;
   }
 
+  /* 输入框 - 改为第一个代码的样式 */
   .form-control, .form-select {
     padding: 0.75rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--input-text);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    position: relative;
+  }
+
+  .form-control::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
   }
 
   .form-control:focus, .form-select:focus {
-    border-color: #6a11cb;
-    box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25);
+    border-color: #6a11cb; /* 改为第一个代码的焦点边框颜色 */
+    box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25); /* 改为第一个代码的焦点阴影 */
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    transform: none; /* 移除焦点动画 */
   }
 
+  /* 按钮 - 改为第一个代码的样式 */
   .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 移除按钮的渐变覆盖 */
+  .btn::before {
+    display: none;
   }
 
   .btn-primary {
@@ -140,23 +212,21 @@ export const generateStyles = () => `
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.2);
+    transform: none; /* 改为第一个代码的无变换效果 */
+    box-shadow: none; /* 移除阴影 */
   }
 
-  .input-group-text, .form-control {
+  .input-group-text {
     background-color: var(--input-bg);
     border-color: var(--input-border);
     color: var(--input-text);
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
   }
 
-  .form-control:focus {
-    background-color: var(--input-bg);
-    color: var(--input-text);
-    box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25);
+  .input-group { 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04); /* 改为第一个代码的阴影 */
   }
-
-  .input-group { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04); }
 
   h2, h4 {
     color: var(--text-color);
@@ -176,10 +246,11 @@ export const generateStyles = () => `
   .btn-outline-secondary {
     color: var(--text-color);
     border-color: var(--input-border);
+    background-color: transparent;
   }
 
   .btn-outline-secondary:hover {
-    background-color: var(--input-bg);
+    background-color: var(--input-bg); /* 改为第一个代码的悬停背景 */
     color: var(--text-color);
   }
 
@@ -200,15 +271,31 @@ export const generateStyles = () => `
     right: 20px;
     z-index: 1000;
     color: var(--text-color);
-    border-color: var(--input-border);
-    background-color: var(--card-bg);
-    transition: all 0.3s var(--transition-timing);
+    background-color: transparent; /* 改为第一个代码的透明背景 */
+    border: none; /* 改为第一个代码的无边框 */
+    border-radius: 0; /* 改为第一个代码的无圆角 */
+    box-shadow: none; /* 移除阴影 */
+    padding: 0;
+    transition: color 0.3s var(--transition-timing);
   }
 
   #darkModeToggle:hover {
-    background-color: var(--dropdown-hover-bg);
-    border-color: var(--text-color);
-    color: var(--text-color);
+    transform: none !important; /* 移除悬停动画 */
+    background-color: transparent; /* 保持透明 */
+    border: none;
+  }
+
+  #darkModeToggle i {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  #darkModeToggle {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .github-link {
@@ -219,9 +306,23 @@ export const generateStyles = () => `
     font-size: 2rem;
     color: var(--text-color);
     transition: color 0.3s ease;
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
+    background: none; /* 移除背景 */
+    border-radius: 0; /* 移除圆角 */
+    padding: 0; /* 移除内边距 */
+    width: auto; /* 自动宽度 */
+    height: auto; /* 自动高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .github-link:hover { color: #6a11cb; }
+  .github-link:hover { 
+    color: #136cef; /* 改为第一个代码的悬停颜色 */
+    background: none; /* 移除背景 */
+    transform: none; /* 移除变换 */
+  }
   
   .tooltip-icon {
     cursor: pointer;
@@ -247,9 +348,7 @@ export const generateStyles = () => `
   .tooltip-content {
     visibility: hidden;
     opacity: 0;
-    background-color: var(--card-bg);
-    position: fixed;
-    background-color: var(--card-bg);
+    background-color: var(--dropdown-bg);
     color: var(--text-color);
     border: 1px solid var(--input-border);
     border-radius: 6px;
@@ -257,8 +356,10 @@ export const generateStyles = () => `
     z-index: 1000;
     width: 180px;
     max-width: 90vw;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 改为第一个代码的阴影 */
     transition: opacity 0.3s, visibility 0.3s;
+    backdrop-filter: none; /* 移除毛玻璃效果 */
+    -webkit-backdrop-filter: none;
   }
 
   .tooltip-icon:hover .tooltip-content {
@@ -276,21 +377,22 @@ export const generateStyles = () => `
   }
 
   .form-check-input {
-    background-color: var(--checkbox-bg);
-    border-color: var(--checkbox-border);
+    background-color: var(--switch-bg);
+    border-color: var(--switch-border);
   }
 
   .form-check-input:checked {
-    background-color: var(--checkbox-checked-bg);
-    border-color: var(--checkbox-checked-border);
+    background-color: var(--switch-checked-bg);
+    border-color: var(--switch-checked-bg);
   }
 
   .form-check-label {
     color: var(--text-color);
   }
+
   .explanation-text {
-    background-color: var(--explanation-bg);
-    color: var(--explanation-text);
+    background-color: var(--section-bg);
+    color: var(--text-color);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -307,15 +409,15 @@ export const generateStyles = () => `
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e0e0e0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 1em;
     padding-right: 2.5em;
   }
 
-  [data-theme="dark"] .form-select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e0e0e0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  [data-theme="light"] .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   }
 
   .form-select:focus {
@@ -323,31 +425,6 @@ export const generateStyles = () => `
     color: var(--select-text);
     border-color: var(--checkbox-checked-border);
     box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.25);
-  }
-
-  .form-control::placeholder {
-    color: var(--placeholder-color);
-    opacity: 1;
-  }
-
-  .form-control::-webkit-input-placeholder {
-    color: var(--placeholder-color);
-    opacity: 1;
-  }
-
-  .form-control::-moz-placeholder {
-    color: var(--placeholder-color);
-    opacity: 1;
-  }
-
-  .form-control:-ms-input-placeholder {
-    color: var(--placeholder-color);
-    opacity: 1;
-  }
-
-  .form-control::-ms-input-placeholder {
-    color: var(--placeholder-color);
-    opacity: 1;
   }
 
   #advancedOptions {
@@ -394,6 +471,8 @@ export const generateStyles = () => `
     border-radius: 10px;
     background-color: var(--card-bg);
     overflow: hidden;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 
   #customRules, #customRulesJSON {
@@ -443,6 +522,8 @@ export const generateStyles = () => `
     transition: all 0.3s var(--transition-timing);
     border-bottom: 3px solid transparent;
     font-size: 0.95rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   .custom-rules-tab:hover {
@@ -451,8 +532,8 @@ export const generateStyles = () => `
   }
 
   .custom-rules-tab.active {
-    color: #6a11cb;
-    border-bottom-color: #6a11cb;
+    color: #6ee7b7;
+    border-bottom-color: #6ee7b7;
     background-color: var(--dropdown-hover-bg);
     font-weight: 600;
   }
@@ -495,6 +576,8 @@ export const generateStyles = () => `
     background-color: var(--section-bg);
     border-radius: 8px;
     border: 1px solid var(--section-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .conversion-controls .btn {
@@ -611,6 +694,8 @@ export const generateStyles = () => `
     background-color: var(--section-bg);
     border-radius: 8px;
     margin: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .empty-state i {
@@ -641,6 +726,8 @@ export const generateStyles = () => `
     border-radius: 6px;
     font-weight: 500;
     transition: all 0.3s var(--transition-timing);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   .json-validation-message.valid {
@@ -677,9 +764,11 @@ export const generateStyles = () => `
     margin-bottom: 1rem;
     border: 1px solid var(--input-border);
     border-radius: 8px;
-    background-color: var(--card-bg);
+    background-color: var(--section-bg);
     transition: all 0.3s var(--transition-timing);
     padding: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .custom-rule:hover, .custom-rule-json:hover {
@@ -745,7 +834,7 @@ export const generateStyles = () => `
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -754,6 +843,8 @@ export const generateStyles = () => `
     transition: opacity 0.3s var(--transition-timing),
                 visibility 0.3s var(--transition-timing);
     z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .qr-modal.show {
@@ -762,13 +853,16 @@ export const generateStyles = () => `
   }
 
   .qr-card {
-    background-color: white;
+    background: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     text-align: center;
     transform: scale(0.9) translateY(20px);
     transition: transform 0.3s var(--transition-timing);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--input-border);
   }
 
   .qr-modal.show .qr-card {
@@ -782,7 +876,7 @@ export const generateStyles = () => `
 
   .qr-card p {
     margin-top: 10px;
-    color: #333;
+    color: var(--text-color);
     font-size: 16px;
   }
 
@@ -794,6 +888,8 @@ export const generateStyles = () => `
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   #subscribeLinksContainer {
@@ -857,7 +953,6 @@ export const generateStyles = () => `
   }
 
   /* Ensure all button containers within cards have proper spacing */
-  /* Fix button container spacing without interfering with gap-2 */
   .card-body .d-grid {
     margin-left: 1.5rem !important;
     margin-right: 1.5rem !important;
@@ -929,6 +1024,27 @@ export const generateStyles = () => `
       margin-left: 1rem !important;
       margin-right: 1rem !important;
     }
+
+    .card {
+      margin: 1rem;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    #darkModeToggle {
+      top: 10px;
+      right: 10px;
+    }
+    
+    .github-link {
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+    }
   }
 
   .form-select option {
@@ -941,19 +1057,11 @@ export const generateStyles = () => `
     color: var(--dropdown-hover-text);
   }
 
-  .form-check-input {
-    background-color: var(--switch-bg);
-    border-color: var(--switch-border);
-  }
-
-  .form-check-input:checked {
-    background-color: var(--switch-checked-bg);
-    border-color: var(--switch-checked-bg);
-  }
-
   .dropdown-menu {
     background-color: var(--dropdown-bg);
     border-color: var(--select-border);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 
   .dropdown-item {
@@ -979,7 +1087,7 @@ export const generateStyles = () => `
     transition: all var(--transition-speed) var(--transition-timing);
   }
 
-  /* 高级选项展开/收起动画 - Updated to remove height constraints */
+  /* 高级选项展开/收起动画 */
   #advancedOptions {
     max-height: 0;
     opacity: 0;
@@ -996,8 +1104,6 @@ export const generateStyles = () => `
     transform: translateY(0);
     overflow: visible;
   }
-
-
 
   /* 按钮悬停动画 */
   .btn {
@@ -1018,29 +1124,6 @@ export const generateStyles = () => `
 
   .btn-success {
     animation: successPulse 0.3s var(--transition-timing);
-  }
-
-  /* QR码模态框动画 */
-  .qr-modal {
-    opacity: 0;
-    visibility: hidden;
-    backdrop-filter: blur(5px);
-    transition: opacity 0.3s var(--transition-timing),
-                visibility 0.3s var(--transition-timing);
-  }
-
-  .qr-modal.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .qr-card {
-    transform: scale(0.9) translateY(20px);
-    transition: transform 0.3s var(--transition-timing);
-  }
-
-  .qr-modal.show .qr-card {
-    transform: scale(1) translateY(0);
   }
 
   /* 自定义规则添加/删除动画 */
@@ -1088,9 +1171,109 @@ export const generateStyles = () => `
                 transform 0.3s var(--transition-timing);
   }
 
-   .tooltip-icon:hover .tooltip-content {
+  .tooltip-icon:hover .tooltip-content {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-`;
+  /* 之前的样式保持不变... */
+  
+  /* API文档按钮样式 */
+  .api-doc-btn {
+    color: #0aa26d;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    border-radius: 0;
+    padding: 0.5rem 1.2rem;
+    transition: none;
+    position: fixed;
+    top: 13px;
+    right: 200px;
+    z-index: 1001;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .api-doc-btn:hover, .api-doc-btn:focus {
+    color: #1f579b !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* 语言选择器样式 */
+  .lang-select-container {
+    position: fixed;
+    top: 10px;
+    right: 70px;
+    z-index: 1001;
+  }
+  
+  .lang-select {
+    width: 110px;
+    height: 45px;
+  }
+  
+  /* 深色模式适配 */
+  @media (prefers-color-scheme: dark) {
+    .api-doc-btn {
+      color: #fff !important;
+    }
+    .api-doc-btn:hover, .api-doc-btn:focus {
+      color: #1f579b !important;
+    }
+  }
+  
+  body[data-theme="dark"] .api-doc-btn,
+  html[data-theme="dark"] .api-doc-btn {
+    color: #fff !important;
+  }
+  
+  body[data-theme="dark"] .api-doc-btn:hover,
+  html[data-theme="dark"] .api-doc-btn:hover,
+  body[data-theme="dark"] .api-doc-btn:focus,
+  html[data-theme="dark"] .api-doc-btn:focus {
+    color: #1f579b !important;
+  }
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .api-doc-btn {
+      top: 10px;
+      right: 160px;
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+    
+    .lang-select-container {
+      top: 10px;
+      right: 60px;
+    }
+    
+    .lang-select {
+      width: 100px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .api-doc-btn {
+      right: 140px;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+    }
+    
+    .lang-select-container {
+      right: 50px;
+    }
+    
+    .lang-select {
+      width: 90px;
+      height: 35px;
+    }
+  }
+  
+  `;
+}
