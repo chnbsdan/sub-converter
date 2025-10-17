@@ -76,7 +76,7 @@ export function generateStyles() {
 
   .container { 
     max-width: 800px; 
-    margin: 5rem auto !important;
+    margin: 0 auto;
     padding: 0 1rem;
     position: relative;
     z-index: 1;
