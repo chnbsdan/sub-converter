@@ -36,8 +36,8 @@ const generateHead = () => `
 const generateBody = (xrayUrl, singboxUrl, clashUrl, surgeUrl, baseUrl) => `
   <body>
     ${generateDarkModeToggle()}
-    ${generateApiDocButton()}        // 新增
-    ${generateLanguageSelector()}    // 新增
+    ${generateApiDocButton()}        
+    ${generateLanguageSelector()}   
     ${generateGithubLink()}
     <div class="container mt-5">
       <div class="card mb-5">
