@@ -197,7 +197,6 @@ const generateScripts = () => `
     ${customPathFunctions()}
     ${saveConfig()}
     ${clearConfig()}
-    ${languageSwitchFunction()}  // 在这里添加语言切换功能
     // 在文件末尾，所有其他函数之后添加这个函数
 const languageSwitchFunction = () => `
   // 语言切换功能
